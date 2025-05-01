@@ -1,0 +1,124 @@
+.enrolled-courses-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  
+  .enrolled-courses-header {
+    color: #0a73b0;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.75rem;
+  }
+  
+  .enrolled-courses-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #36d7ff, #0a73b0);
+    border-radius: 3px;
+  }
+  
+  .courses-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .courses-table thead {
+    background: linear-gradient(135deg, #36d7ff, #0a73b0);
+    color: white;
+  }
+  
+  .courses-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  .courses-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .courses-table tbody tr {
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+  }
+  
+  .courses-table tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .courses-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .drop-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, #ff6b6b, #b00a0a);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(176, 10, 10, 0.2);
+    margin-top: 1rem;
+  }
+  
+  .drop-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(176, 10, 10, 0.3);
+    background: linear-gradient(135deg, #ff5252, #9e0000);
+  }
+  
+  .drop-button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .no-courses-message {
+    text-align: center;
+    padding: 2rem;
+    color: #555;
+  }
+  
+  /* Checkbox styling */
+  .courses-table input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #0a73b0;
+    cursor: pointer;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .courses-table {
+      display: block;
+      overflow-x: auto;
+    }
+    
+    .enrolled-courses-header {
+      font-size: 1.5rem;
+    }
+    
+    .courses-table th,
+    .courses-table td {
+      padding: 0.75rem;
+    }
+  }

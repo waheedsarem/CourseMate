@@ -1,0 +1,117 @@
+/* Dashboard.css - Refined Version */
+body {
+    background: linear-gradient(135deg, #cccccc, #ffffff, #666666);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.08),
+        0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-container h1 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #0a73b0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.dashboard-container h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #36d7ff, #0a73b0);
+    border-radius: 3px;
+}
+
+.student-details {
+    display: grid;
+    grid-template-columns: minmax(max-content, 1fr) 2fr;
+    gap: 0.75rem 1rem;
+    margin: 2rem auto;
+    padding: 1.25rem;
+    background: rgba(10, 115, 176, 0.03);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(10, 115, 176, 0.1);
+}
+
+/* Improved Button Layout */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.button-container button {
+    padding: 0.65rem; /* Reduced padding */
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, #36d7ff, #0a73b0);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(10, 115, 176, 0.2);
+    width: 100%;
+}
+
+/* Centered Enrolled Courses button */
+.button-container button:nth-last-child(2) {
+    grid-column: 1 / -1;
+    width: 50%;
+    justify-self: center;
+    margin-top: 0.5rem;
+}
+
+/* Lighter red for logout button */
+.button-container button.logout-button {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #ff6b6b, #d33f3f);
+    margin-top: 0.5rem;
+}
+
+.button-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(10, 115, 176, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .button-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-container button:nth-last-child(2) {
+        width: 100%;
+    }
+    
+    .dashboard-container {
+        padding: 1.5rem;
+    }
+}

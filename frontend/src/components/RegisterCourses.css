@@ -1,0 +1,161 @@
+/* RegisterCourses.css */
+.register-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.register-header {
+    color: #0a73b0;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.register-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #36d7ff, #0a73b0);
+    border-radius: 3px;
+}
+
+.message {
+    padding: 0.75rem 1rem;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+    max-width: 800px;
+}
+
+.message.success {
+    background-color: rgba(10, 176, 115, 0.1);
+    color: #0ab073;
+    border: 1px solid rgba(10, 176, 115, 0.3);
+}
+
+.message.error {
+    background-color: rgba(176, 10, 10, 0.1);
+    color: #b00a0a;
+    border: 1px solid rgba(176, 10, 10, 0.3);
+}
+
+.courses-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.courses-table thead {
+    background: linear-gradient(135deg, rgba(54, 215, 255, 0.1), rgba(10, 115, 176, 0.1));
+}
+
+.courses-table th {
+    padding: 0.875rem 1rem;
+    text-align: left;
+    color: #0a73b0;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(10, 115, 176, 0.2);
+}
+
+.courses-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(10, 115, 176, 0.1);
+}
+
+.courses-table tr:last-child td {
+    border-bottom: none;
+}
+
+.courses-table tr:hover {
+    background-color: rgba(10, 115, 176, 0.03);
+}
+
+.status-enrolled {
+    color: #0ab073;
+    font-weight: 500;
+}
+
+.status-full {
+    color: #b00a0a;
+    font-weight: 500;
+}
+
+.status-available {
+    color: #0a73b0;
+    font-weight: 500;
+}
+
+.enroll-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, #36d7ff, #0a73b0);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(10, 115, 176, 0.2);
+    display: block;
+    margin: 1.5rem auto 0;
+}
+
+.enroll-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: linear-gradient(135deg, #cccccc, #999999);
+}
+
+.enroll-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 115, 176, 0.3);
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    transform: scale(1.2);
+    accent-color: #0a73b0;
+    cursor: pointer;
+}
+
+.no-courses {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .courses-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .register-container {
+        padding: 1rem;
+    }
+    
+    .courses-table th, 
+    .courses-table td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}

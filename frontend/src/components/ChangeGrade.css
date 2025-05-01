@@ -1,0 +1,203 @@
+.change-grade-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa, #e4e8eb, #d1d5d8);
+  padding: 2rem;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.change-grade-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.change-grade-header {
+  color: #0a73b0;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.change-grade-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #36d7ff, #0a73b0);
+  border-radius: 3px;
+}
+
+.operation-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.operation-selector {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, #36d7ff, #0a73b0);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex: 1;
+  max-width: 200px;
+}
+
+.operation-selector:hover {
+  background: linear-gradient(135deg, #0a73b0, #36d7ff);
+  box-shadow: 0 4px 12px rgba(10, 115, 176, 0.3);
+}
+
+.grade-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.form-group label {
+  color: #555;
+  font-weight: 500;
+  font-size: 0.95rem;
+  width: 100%;
+  text-align: left;
+}
+
+.form-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #36d7ff;
+  box-shadow: 0 0 0 3px rgba(54, 215, 255, 0.2);
+}
+
+.submit-button {
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+/* Add button - Green gradient */
+.submit-button.add {
+  background: linear-gradient(135deg, #84cc16, #65a30d);
+  box-shadow: 0 2px 6px rgba(101, 163, 13, 0.2);
+}
+
+.submit-button.add:hover {
+  background: linear-gradient(135deg, #65a30d, #4d7c0f);
+  box-shadow: 0 4px 12px rgba(101, 163, 13, 0.3);
+}
+
+/* Delete button - Red gradient */
+.submit-button.delete {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.2);
+}
+
+.submit-button.delete:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+/* Update button - Yellow gradient */
+.submit-button.update {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.2);
+}
+
+.submit-button.update:hover {
+  background: linear-gradient(135deg, #d97706, #b45309);
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+}
+
+.message {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.success-message {
+  color: #15803d;
+  background-color: rgba(21, 128, 61, 0.1);
+  border: 1px solid rgba(21, 128, 61, 0.3);
+}
+
+.error-message {
+  color: #b91c1c;
+  background-color: rgba(185, 28, 28, 0.1);
+  border: 1px solid rgba(185, 28, 28, 0.3);
+}
+
+@media (max-width: 600px) {
+  .change-grade-container {
+    padding: 1rem;
+  }
+  
+  .change-grade-card {
+    padding: 1.5rem;
+  }
+  
+  .change-grade-header {
+    font-size: 1.5rem;
+  }
+  
+  .operation-buttons {
+    flex-direction: column;
+  }
+  
+  .operation-selector {
+    width: 100%;
+    max-width: none;
+  }
+}

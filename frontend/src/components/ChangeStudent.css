@@ -1,0 +1,200 @@
+/* ChangeStudent.css */
+.change-student-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff, #666666, #cccccc);
+  padding: 2rem;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.change-student-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.change-student-header {
+  color: #0a73b0;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.change-student-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #36d7ff, #0a73b0);
+  border-radius: 3px;
+}
+
+.operation-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.operation-selector {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, #36d7ff, #0a73b0);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.operation-selector:hover {
+  background: linear-gradient(135deg, #0a73b0, #36d7ff);
+  box-shadow: 0 4px 12px rgba(10, 115, 176, 0.3);
+}
+
+.student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 70%;
+  align-items: flex-start;
+}
+
+.form-group label {
+  color: #555;
+  font-weight: 500;
+  font-size: 0.95rem;
+  width: 100%;
+  text-align: left;
+}
+
+.form-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #36d7ff;
+  box-shadow: 0 0 0 3px rgba(54, 215, 255, 0.2);
+}
+
+.submit-button {
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.submit-button.add {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32, #1B5E20);
+  box-shadow: 0 2px 6px rgba(46, 125, 50, 0.2);
+}
+
+.submit-button.add:hover {
+  background: linear-gradient(135deg, #43A047, #2E7D32, #1B5E20);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.submit-button.delete {
+  background: linear-gradient(135deg, #ff4444, #cc0000, #990000);
+  box-shadow: 0 2px 6px rgba(204, 0, 0, 0.2);
+}
+
+.submit-button.delete:hover {
+  background: linear-gradient(135deg, #ff3333, #bb0000, #880000);
+  box-shadow: 0 4px 12px rgba(204, 0, 0, 0.3);
+}
+
+.submit-button.update {
+  background: linear-gradient(135deg, #FFD700, #FFC600, #FFA500);
+  box-shadow: 0 2px 6px rgba(255, 198, 0, 0.2);
+  color: #333;
+}
+
+.submit-button.update:hover {
+  background: linear-gradient(135deg, #FFC600, #FFB700, #FF9900);
+  box-shadow: 0 4px 12px rgba(255, 198, 0, 0.3);
+}
+
+.message {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.success-message {
+  color: #0ab073;
+  background-color: rgba(10, 176, 115, 0.1);
+  border: 1px solid rgba(10, 176, 115, 0.3);
+}
+
+.error-message {
+  color: #b00a0a;
+  background-color: rgba(176, 10, 10, 0.1);
+  border: 1px solid rgba(176, 10, 10, 0.3);
+}
+
+@media (max-width: 600px) {
+  .change-student-container {
+    padding: 1rem;
+  }
+  
+  .change-student-card {
+    padding: 1.5rem;
+  }
+  
+  .change-student-header {
+    font-size: 1.5rem;
+  }
+  
+  .operation-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .operation-selector {
+    width: 100%;
+  }
+} 
