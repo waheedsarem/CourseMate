@@ -17,7 +17,8 @@ import ChangeGrade from './components/ChangeGrade';
 import ChangeEnrolled from './components/ChangeEnrolled';
 import ChangeLogIn from './components/ChangeLogIn';
 import ChangeAdmin from './components/ChangeAdmin';
-import ProtectedRoute from './components/ProtectedRoute'; // Import ProtectedRoute for admin pages
+import SeeEnrolled from './components/SeeEnrolled'; // ✅ NEW COMPONENT
+import ProtectedRoute from './components/ProtectedRoute';
 import ProtectedRouteAdmin from './components/ProtectedRouteAdmin';
 
 function App() {
@@ -26,131 +27,27 @@ function App() {
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Login />} />
-        <Route path="/admin" element={<AdminLogin />} /> {/* Admin login is public */}
+        <Route path="/admin" element={<AdminLogin />} />
 
-        {/* Protected Routes for Students */}
-        <Route 
-          path="/dashboard" 
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          } 
-        />
-        <Route 
-          path="/transcript" 
-          element={
-            <ProtectedRoute>
-              <Transcript />
-            </ProtectedRoute>
-          }
-        />
-        <Route 
-          path="/register" 
-          element={
-            <ProtectedRoute>
-              <RegisterCourses />
-            </ProtectedRoute>
-          }
-        />
-        <Route 
-          path="/swap" 
-          element={
-            <ProtectedRoute>
-              <SwapSection />
-            </ProtectedRoute>
-          }
-        />
-        <Route 
-          path="/reset-password" 
-          element={
-            <ProtectedRoute>
-              <ResetPassword />
-            </ProtectedRoute>
-          }
-        />
-        <Route 
-          path="/enrolled-courses" 
-          element={
-            <ProtectedRoute>
-              <EnrolledCourses />
-            </ProtectedRoute>
-          }
-        />
+        {/* Student Protected Routes */}
+        <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+        <Route path="/transcript" element={<ProtectedRoute><Transcript /></ProtectedRoute>} />
+        <Route path="/register" element={<ProtectedRoute><RegisterCourses /></ProtectedRoute>} />
+        <Route path="/swap" element={<ProtectedRoute><SwapSection /></ProtectedRoute>} />
+        <Route path="/reset-password" element={<ProtectedRoute><ResetPassword /></ProtectedRoute>} />
+        <Route path="/enrolled-courses" element={<ProtectedRoute><EnrolledCourses /></ProtectedRoute>} />
 
-        {/* Admin Routes - Protected */}
-        <Route 
-          path="/AdminDashboard" 
-          element={
-            <ProtectedRouteAdmin>
-              <AdminDashboard />
-            </ProtectedRouteAdmin>
-          }
-        />
-        <Route 
-          path="/changecourse" 
-          element={
-            <ProtectedRouteAdmin>
-              <ChangeCourse />
-            </ProtectedRouteAdmin>
-          }
-        />
-        <Route 
-          path="/changesection" 
-          element={
-            <ProtectedRouteAdmin>
-              <ChangeSection />
-            </ProtectedRouteAdmin>
-          }
-        />
-        <Route 
-          path="/changestudent" 
-          element={
-            <ProtectedRouteAdmin>
-              <ChangeStudent />
-            </ProtectedRouteAdmin>
-          }
-        />
-        <Route 
-          path="/changeteacher" 
-          element={
-            <ProtectedRouteAdmin>
-              <ChangeTeacher />
-            </ProtectedRouteAdmin>
-          }
-        />
-        <Route 
-          path="/changelogin" 
-          element={
-            <ProtectedRouteAdmin>
-              <ChangeLogIn />
-            </ProtectedRouteAdmin>
-          }
-        />
-         <Route 
-          path="/changeenrolled" 
-          element={
-            <ProtectedRouteAdmin>
-              <ChangeEnrolled />
-            </ProtectedRouteAdmin>
-          }
-        />
-         <Route 
-          path="/changegrade" 
-          element={
-            <ProtectedRouteAdmin>
-              <ChangeGrade/>
-            </ProtectedRouteAdmin>
-          }
-        /> 
-        <Route 
-        path="/changeadmin" 
-        element={
-          <ProtectedRouteAdmin>
-            <ChangeAdmin />
-          </ProtectedRouteAdmin>
-        }
-      />
+        {/* Admin Protected Routes */}
+        <Route path="/AdminDashboard" element={<ProtectedRouteAdmin><AdminDashboard /></ProtectedRouteAdmin>} />
+        <Route path="/changecourse" element={<ProtectedRouteAdmin><ChangeCourse /></ProtectedRouteAdmin>} />
+        <Route path="/changesection" element={<ProtectedRouteAdmin><ChangeSection /></ProtectedRouteAdmin>} />
+        <Route path="/changestudent" element={<ProtectedRouteAdmin><ChangeStudent /></ProtectedRouteAdmin>} />
+        <Route path="/changeteacher" element={<ProtectedRouteAdmin><ChangeTeacher /></ProtectedRouteAdmin>} />
+        <Route path="/changelogin" element={<ProtectedRouteAdmin><ChangeLogIn /></ProtectedRouteAdmin>} />
+        <Route path="/changeenrolled" element={<ProtectedRouteAdmin><ChangeEnrolled /></ProtectedRouteAdmin>} />
+        <Route path="/changegrade" element={<ProtectedRouteAdmin><ChangeGrade /></ProtectedRouteAdmin>} />
+        <Route path="/changeadmin" element={<ProtectedRouteAdmin><ChangeAdmin /></ProtectedRouteAdmin>} />
+        <Route path="/seeenrolled" element={<ProtectedRouteAdmin><SeeEnrolled /></ProtectedRouteAdmin>} /> {/* ✅ NEW ROUTE */}
       </Routes>
     </Router>
   );

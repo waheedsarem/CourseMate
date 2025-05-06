@@ -1398,6 +1398,43 @@ try {
 }
 });
 
+app.get('/api/fetchteachercoursecode', async (req, res) => {
+  try {
+    const pool = await sql.connect(config);  // Initialize the pool here
+    const result = await pool.request().query(`
+      SELECT DISTINCT teacher_course_code FROM Enrolled
+    `);
+    res.json(result.recordset);
+  } catch (err) {
+    console.error('Error fetching teacher course codes:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// Fetch all students enrolled in a specific course
+app.get('/api/enrolledstudents/:teacherCourseCode', async (req, res) => {
+  const { teacherCourseCode } = req.params;
+
+  try {
+    const pool = await sql.connect(config);
+
+    const result = await pool.request()
+      .input('teachercourseCode', sql.VarChar(50), teacherCourseCode)
+      .query(`
+        SELECT s.roll_no, s.first_name, s.last_name, s.batch, s.semester
+        FROM Students s
+        JOIN Enrolled e ON e.roll_no = s.roll_no
+        WHERE e.teacher_course_code = @teachercourseCode
+      `);
+
+    res.status(200).json(result.recordset);
+  } catch (err) {
+    console.error('Error fetching students:', err.message);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
 
 
 // ------------------------------------------------------------------------------------------
