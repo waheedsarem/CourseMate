@@ -1434,7 +1434,55 @@ app.get('/api/enrolledstudents/:teacherCourseCode', async (req, res) => {
   }
 });
 
+app.post('/viewstudentinfo', async (req, res) => {
+  const { semester } = req.body;
 
+  if (!semester) {
+    return res.status(400).json({ error: 'Semester is required.' });
+  }
+
+  try {
+    const result = await sql.query`
+      SELECT 
+        s.roll_no AS rollNumber,
+        s.first_name + ' ' + s.last_name AS name,
+        CAST(SUM(
+          CASE g.grade
+            WHEN 'A+' THEN 4.0
+            WHEN 'A'  THEN 4.0
+            WHEN 'A-' THEN 3.7
+            WHEN 'B+' THEN 3.3
+            WHEN 'B'  THEN 3.0
+            WHEN 'B-' THEN 2.7
+            WHEN 'C+' THEN 2.3
+            WHEN 'C'  THEN 2.0
+            WHEN 'C-' THEN 1.7
+            WHEN 'D+' THEN 1.3
+            WHEN 'D'  THEN 1.0
+            WHEN 'F'  THEN 0.0
+            ELSE NULL
+          END * c.credit_hours
+        ) AS DECIMAL(5,2)) / 
+        SUM(CASE 
+              WHEN g.grade <> 'S' AND c.course_type <> 'non-credit' 
+              THEN c.credit_hours 
+              ELSE 0 
+            END) AS cgpa
+      FROM Students s
+      JOIN Grade g ON s.roll_no = g.roll_no
+      JOIN Courses c ON g.course_code = c.course_code
+      WHERE s.semester = ${semester} AND c.course_type <> 'non-credit'
+      GROUP BY s.roll_no, s.first_name, s.last_name;
+    `;
+    console.log("here");
+    res.status(200).json(result.recordset);
+  } catch (err) {
+    console.error('❌ CGPA calculation failed:', err.message);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+  
 
 
 // ------------------------------------------------------------------------------------------

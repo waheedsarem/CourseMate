@@ -1,0 +1,104 @@
+/* ViewStudentInfo.css */
+
+.view-student-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  
+  .view-student-header {
+    color: #0a73b0;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.75rem;
+  }
+  
+  .view-student-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #36d7ff, #0a73b0);
+    border-radius: 3px;
+  }
+  
+  .semester-select-label {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .semester-select-dropdown {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .selected-semester {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .Transcript-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .Transcript-table thead {
+    background: linear-gradient(135deg, #36d7ff, #0a73b0);
+    color: white;
+  }
+  
+  .Transcript-table th,
+  .Transcript-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .Transcript-table tbody tr {
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+  }
+  
+  .Transcript-table tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .Transcript-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  @media (max-width: 768px) {
+    .Transcript-table {
+      display: block;
+      overflow-x: auto;
+    }
+  
+    .view-student-header {
+      font-size: 1.5rem;
+    }
+  
+    .Transcript-table th,
+    .Transcript-table td {
+      padding: 0.75rem;
+    }
+  }
+  

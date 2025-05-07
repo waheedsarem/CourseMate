@@ -6,7 +6,7 @@ function AdminDashboard() {
   const { state } = useLocation();
   const navigate = useNavigate();
   const rollNo = state?.rollNo;
-
+  
   // Handle logout
   const handleLogout = () => {
     localStorage.removeItem('token');  // Clear JWT
@@ -17,7 +17,7 @@ function AdminDashboard() {
     <div className="admin-dashboard-container">
       <div className="admin-dashboard-card">
         <h2 className="dashboard-header">Admin Dashboard</h2>
-
+        
         <div className="dashboard-actions">
           <button 
             className="dashboard-button" 
@@ -73,8 +73,15 @@ function AdminDashboard() {
           >
             See Enrolled Students
           </button>
+          {/* Added button for "View Student Info" */}
+          <button 
+            className="dashboard-button" 
+            onClick={() => navigate('/viewstudentinfo', { state: { rollNo } })}
+          >
+            View Student Info
+          </button>
         </div>
-
+        
         <button className="logout-button" onClick={handleLogout}>
           Logout
         </button>

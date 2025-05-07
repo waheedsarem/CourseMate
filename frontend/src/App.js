@@ -17,7 +17,8 @@ import ChangeGrade from './components/ChangeGrade';
 import ChangeEnrolled from './components/ChangeEnrolled';
 import ChangeLogIn from './components/ChangeLogIn';
 import ChangeAdmin from './components/ChangeAdmin';
-import SeeEnrolled from './components/SeeEnrolled'; // ✅ NEW COMPONENT
+import SeeEnrolled from './components/SeeEnrolled'; 
+import ViewStudentInfo from './components/ViewStudentInfo';
 import ProtectedRoute from './components/ProtectedRoute';
 import ProtectedRouteAdmin from './components/ProtectedRouteAdmin';
 
@@ -47,7 +48,8 @@ function App() {
         <Route path="/changeenrolled" element={<ProtectedRouteAdmin><ChangeEnrolled /></ProtectedRouteAdmin>} />
         <Route path="/changegrade" element={<ProtectedRouteAdmin><ChangeGrade /></ProtectedRouteAdmin>} />
         <Route path="/changeadmin" element={<ProtectedRouteAdmin><ChangeAdmin /></ProtectedRouteAdmin>} />
-        <Route path="/seeenrolled" element={<ProtectedRouteAdmin><SeeEnrolled /></ProtectedRouteAdmin>} /> {/* ✅ NEW ROUTE */}
+        <Route path="/seeenrolled" element={<ProtectedRouteAdmin><SeeEnrolled /></ProtectedRouteAdmin>} /> 
+        <Route path="/viewstudentinfo" element={<ProtectedRouteAdmin><ViewStudentInfo /></ProtectedRouteAdmin>} /> 
       </Routes>
     </Router>
   );

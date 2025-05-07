@@ -1,9 +1,10 @@
+/* ChangeGrade.css */
 .change-grade-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa, #e4e8eb, #d1d5d8);
+  background: linear-gradient(135deg, #ffffff, #666666, #cccccc);
   padding: 2rem;
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
@@ -14,7 +15,7 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   padding: 2rem;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,8 +48,6 @@
   gap: 1rem;
   margin-bottom: 2rem;
   justify-content: center;
-  width: 100%;
-  flex-wrap: wrap;
 }
 
 .operation-selector {
@@ -61,8 +60,6 @@
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.25s ease;
-  flex: 1;
-  max-width: 200px;
 }
 
 .operation-selector:hover {
@@ -82,7 +79,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 100%;
+  width: 70%;
   align-items: flex-start;
 }
 
@@ -96,7 +93,7 @@
 
 .form-input {
   padding: 0.75rem 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 0.5rem;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -123,81 +120,62 @@
   margin-top: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  width: 100%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
-/* Add button - Green gradient */
 .submit-button.add {
-  background: linear-gradient(135deg, #84cc16, #65a30d);
-  box-shadow: 0 2px 6px rgba(101, 163, 13, 0.2);
+  background: linear-gradient(135deg, #4CAF50, #2E7D32, #1B5E20);
+  box-shadow: 0 2px 6px rgba(46, 125, 50, 0.2);
 }
 
 .submit-button.add:hover {
-  background: linear-gradient(135deg, #65a30d, #4d7c0f);
-  box-shadow: 0 4px 12px rgba(101, 163, 13, 0.3);
+  background: linear-gradient(135deg, #43A047, #2E7D32, #1B5E20);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
 }
 
-/* Delete button - Red gradient */
 .submit-button.delete {
-  background: linear-gradient(135deg, #ef4444, #dc2626);
-  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.2);
+  background: linear-gradient(135deg, #ff4444, #cc0000, #990000);
+  box-shadow: 0 2px 6px rgba(204, 0, 0, 0.2);
 }
 
 .submit-button.delete:hover {
-  background: linear-gradient(135deg, #dc2626, #b91c1c);
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+  background: linear-gradient(135deg, #ff3333, #bb0000, #880000);
+  box-shadow: 0 4px 12px rgba(204, 0, 0, 0.3);
 }
 
-/* Update button - Yellow gradient */
 .submit-button.update {
-  background: linear-gradient(135deg, #f59e0b, #d97706);
-  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.2);
+  background: linear-gradient(135deg, #FFD700, #FFC600, #FFA500);
+  box-shadow: 0 2px 6px rgba(255, 198, 0, 0.2);
+  color: #333;
 }
 
 .submit-button.update:hover {
-  background: linear-gradient(135deg, #d97706, #b45309);
-  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
-}
-
-.message {
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  margin-top: 1.5rem;
-  text-align: center;
-  width: 100%;
-}
-
-.success-message {
-  color: #15803d;
-  background-color: rgba(21, 128, 61, 0.1);
-  border: 1px solid rgba(21, 128, 61, 0.3);
-}
-
-.error-message {
-  color: #b91c1c;
-  background-color: rgba(185, 28, 28, 0.1);
-  border: 1px solid rgba(185, 28, 28, 0.3);
+  background: linear-gradient(135deg, #FFC600, #FFB700, #FF9900);
+  box-shadow: 0 4px 12px rgba(255, 198, 0, 0.3);
 }
 
 @media (max-width: 600px) {
   .change-grade-container {
     padding: 1rem;
   }
-  
+
   .change-grade-card {
     padding: 1.5rem;
   }
-  
+
   .change-grade-header {
     font-size: 1.5rem;
   }
-  
+
   .operation-buttons {
     flex-direction: column;
+    gap: 0.75rem;
   }
-  
+
   .operation-selector {
     width: 100%;
-    max-width: none;
   }
 }
