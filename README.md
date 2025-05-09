@@ -4,7 +4,7 @@ MADE BY: Sarem Waheed, Bilal Kashif, M. Hamza Iqbal
 ## Overview  
 CourseMate is a full-stack Course Registration Management System designed to simplify and streamline the process of course registration for students and administrators. It ensures accurate validation, secure student authentication, and dynamic course offerings using a robust relational database schema.
 
-Built using **React.js** for the frontend, **Node.js with Express** for the backend, and **Microsoft SQL Server** as the database, the system is developed to provide flexibility, security, and administrative control over course registration processes.
+Built using **React.js** for the frontend, **Node.js with Express** for the backend, and **Microsoftv SQL Server** as the database, the system is developed to provide flexibility, security, and administrative control over course registration processes.
 
 ## Features  
 - **Student Registration & Login**  
@@ -64,4 +64,4 @@ To run or modify this project, ensure you have the following installed:
 
 ## Acknowledgments  
 - Designed to solve real-world course registration issues with a strong focus on validation and usability.
-- Inspired by academic registration systems and tailored for educational institutions.git 
+- Inspired by academic registration systems and tailored for educational institutions.
