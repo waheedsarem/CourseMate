@@ -1342,7 +1342,7 @@ try {
     res.status(500).json({ error: 'Internal server error' });
 }
   
-});
+});``
 
 app.post('/changeenrolled/add', async (req, res) => {
 const { teacherCourseCode,
@@ -1482,7 +1482,6 @@ app.post('/viewstudentinfo', async (req, res) => {
   }
 });
 
-  
 
 
 // ------------------------------------------------------------------------------------------

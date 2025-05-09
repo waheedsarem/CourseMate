@@ -36,6 +36,10 @@ Built using **React.js** for the frontend, **Node.js with Express** for the back
 3. **`Schema.sql`**
    - The complete SQL schema to set up the database structure including tables like `Students`, `Courses`, `Enrolled`, `Grade`, etc.  
 
+4. **`Swapper Trigger and Sample Inserts.sql`**  
+   - Contains sample `INSERT` values and a trigger for the `Swapper` table  
+   - Automatically swaps courses of students who submit reciprocal swap requests  
+
 ## Prerequisites  
 To run or modify this project, ensure you have the following installed:  
 - **Node.js** and **npm** (for the backend server)  
@@ -60,4 +64,4 @@ To run or modify this project, ensure you have the following installed:
 
 ## Acknowledgments  
 - Designed to solve real-world course registration issues with a strong focus on validation and usability.
-- Inspired by academic registration systems and tailored for educational institutions.
+- Inspired by academic registration systems and tailored for educational institutions.git 
