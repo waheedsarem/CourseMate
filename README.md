@@ -42,7 +42,8 @@ Built using **React.js** for the frontend, **Node.js with Express** for the back
 
 ## Prerequisites  
 To run or modify this project, ensure you have the following installed:  
-- **Node.js** and **npm** (for the backend server)  
+- **Node.js** and **npm** (for the backend server) 
+- gnwuoefhaoweufbwauofbawuo
 - **Microsoft SQL Server** (for the database)  
 - **React.js** (for the frontend, via `npm install`)  
 - **SQL Server Management Studio (SSMS)** (recommended for managing the database)  
