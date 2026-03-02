@@ -11,15 +11,14 @@ app.use(express.json());
 
 // Database Configuration
 const config = {
-    user: "ss",
-    password: "pass",
-    server: "HP_ENVY_X360\\SQLEXPRESS",
+    user: "sa",
+    password: "StrongPass123!",
+    server: "localhost",
     database: "ProjectDB",
     options: {
         trustServerCertificate: true,
         trustedConnection: false,
         enableArithAbort: true,
-        instancename: "SQLEXPRESS"
     },
     port: 1433
 };
@@ -1496,6 +1495,7 @@ app.get('/test', (req, res) => {
 // ------------------------------------------------------------------------------------------
 // Start Server
 // ------------------------------------------------------------------------------------------
-app.listen(5000, () => {
-    console.log('🚀 Server running on http://localhost:5000');
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
 });

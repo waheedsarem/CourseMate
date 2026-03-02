@@ -18,7 +18,7 @@ const ChangeGrade = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const endpoint = `http://localhost:5000/changegrade/${operation}`;
+    const endpoint = `http://localhost:5001/changegrade/${operation}`;
 
     try {
       const response = await fetch(endpoint, {

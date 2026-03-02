@@ -20,8 +20,8 @@ const ChangeEnrolled = () => {
 
     const endpoint =
       operation === "add"
-        ? "http://localhost:5000/changeenrolled/add"
-        : "http://localhost:5000/changeenrolled/delete";
+        ? "http://localhost:5001/changeenrolled/add"
+        : "http://localhost:5001/changeenrolled/delete";
 
     try {
       const response = await fetch(endpoint, {

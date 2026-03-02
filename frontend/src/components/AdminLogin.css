@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #ffffff, #999999, #666666);
+  background: linear-gradient(135deg, #ffffff, #666666, #cccccc);
   padding: 2rem;
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
@@ -12,8 +12,8 @@
 .admin-login-card {
   background-color: #ffffff;
   border-radius: 1rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  padding: 2.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
   width: 100%;
   max-width: 450px;
   display: flex;
@@ -22,17 +22,13 @@
 }
 
 .admin-login-header {
-  color: #36d7ff;
+  color: #0a73b0;
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 1.75rem;
   font-weight: 600;
   position: relative;
   padding-bottom: 0.75rem;
-  background: linear-gradient(135deg, #36d7ff, #0a73b0);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .admin-login-header::after {
@@ -89,8 +85,8 @@
 
 .form-input:focus {
   outline: none;
-  border-color: #0a73b0;
-  box-shadow: 0 0 0 3px rgba(10, 115, 176, 0.2);
+  border-color: #36d7ff;
+  box-shadow: 0 0 0 3px rgba(54, 215, 255, 0.2);
 }
 
 .login-button {
@@ -127,18 +123,18 @@
 }
 
 .success-message {
-  color: #2E7D32;
-  background-color: rgba(46, 125, 50, 0.1);
-  border: 1px solid rgba(46, 125, 50, 0.3);
+  color: #0ab073;
+  background-color: rgba(10, 176, 115, 0.1);
+  border: 1px solid rgba(10, 176, 115, 0.3);
 }
 
 .error-message {
-  color: #d32f2f;
-  background-color: rgba(211, 47, 47, 0.1);
-  border: 1px solid rgba(211, 47, 47, 0.3);
+  color: #b00a0a;
+  background-color: rgba(176, 10, 10, 0.1);
+  border: 1px solid rgba(176, 10, 10, 0.3);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .admin-login-container {
     padding: 1rem;
   }

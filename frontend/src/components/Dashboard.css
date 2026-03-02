@@ -1,18 +1,13 @@
 /* Dashboard.css - Refined Version */
-body {
-    background: linear-gradient(135deg, #cccccc, #ffffff, #666666);
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
 .dashboard-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 2rem;
+    background: linear-gradient(135deg, #ffffff, #666666, #cccccc);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
 }
 
 .dashboard-container {
@@ -20,10 +15,8 @@ body {
     max-width: 500px;
     padding: 2rem;
     background-color: #ffffff;
-    border-radius: 1.25rem;
-    box-shadow: 
-        0 6px 20px rgba(0, 0, 0, 0.08),
-        0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .dashboard-container h1 {
@@ -102,7 +95,7 @@ body {
 }
 
 /* Responsive adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .button-container {
         grid-template-columns: 1fr;
     }

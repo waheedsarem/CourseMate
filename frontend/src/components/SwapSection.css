@@ -14,15 +14,16 @@
     position: relative;
     font-size: 1.75rem;
     font-weight: 600;
-    letter-spacing: -0.5px;
+    text-align: center;
 }
 
 .Swap-header::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
     height: 3px;
     background: linear-gradient(90deg, #36d7ff, #0a73b0);
     border-radius: 3px;
@@ -101,11 +102,12 @@
 }
 
 .Error-message {
-    color: #d32f2f;
+    color: #b00a0a;
     margin: 0.5rem 0;
-    padding: 0.5rem;
-    background-color: rgba(211, 47, 47, 0.1);
-    border-radius: 0.25rem;
+    padding: 0.75rem;
+    background-color: rgba(176, 10, 10, 0.1);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(176, 10, 10, 0.3);
     font-size: 0.9rem;
 }
 

@@ -8,7 +8,7 @@ const SeeEnrolled = () => {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/fetchteachercoursecode')
+    axios.get('http://localhost:5001/api/fetchteachercoursecode')
       .then(response => {
         setCourses(response.data);
       })
@@ -19,7 +19,7 @@ const SeeEnrolled = () => {
 
   useEffect(() => {
     if (selectedCourse) {
-      axios.get(`http://localhost:5000/api/enrolledstudents/${selectedCourse}`)
+      axios.get(`http://localhost:5001/api/enrolledstudents/${selectedCourse}`)
         .then(response => {
           setStudents(response.data);
         })

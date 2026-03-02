@@ -20,7 +20,7 @@ function SwapSection() {
     
     const enterSwapperEntry = async () => {
       try {
-        const response0 = await fetch('http://localhost:5000/SwapSection/LodgeRequest', {
+        const response0 = await fetch('http://localhost:5001/SwapSection/LodgeRequest', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function SwapSection() {
   useEffect(() => {
     const fetchPendingRequests = async () => {
       try {
-        const response1 = await fetch('http://localhost:5000/SwapSection/Pending', {
+        const response1 = await fetch('http://localhost:5001/SwapSection/Pending', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ function SwapSection() {
       }
 
       try {
-        const response2 = await fetch('http://localhost:5000/SwapSection/Enrollments', {
+        const response2 = await fetch('http://localhost:5001/SwapSection/Enrollments', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ function SwapSection() {
       }
 
       try {
-        const response3 = await fetch('http://localhost:5000/SwapSection/Available', {
+        const response3 = await fetch('http://localhost:5001/SwapSection/Available', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ function Dashboard() {
       const token = localStorage.getItem('token'); // Get the JWT token from localStorage
 
       try {
-        const response = await fetch(`http://localhost:5000/student/${rollNo}`, {
+        const response = await fetch(`http://localhost:5001/student/${rollNo}`, {
           headers: {
             Authorization: `Bearer ${token}`, // Send the token in the Authorization header
           },

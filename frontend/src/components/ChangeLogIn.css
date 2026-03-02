@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa, #e4e8eb, #d1d5d8);
+  background: linear-gradient(135deg, #ffffff, #666666, #cccccc);
   padding: 2rem;
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
@@ -174,18 +174,18 @@
 }
 
 .success-message {
-  color: #15803d;
-  background-color: rgba(21, 128, 61, 0.1);
-  border: 1px solid rgba(21, 128, 61, 0.3);
+  color: #0ab073;
+  background-color: rgba(10, 176, 115, 0.1);
+  border: 1px solid rgba(10, 176, 115, 0.3);
 }
 
 .error-message {
-  color: #b91c1c;
-  background-color: rgba(185, 28, 28, 0.1);
-  border: 1px solid rgba(185, 28, 28, 0.3);
+  color: #b00a0a;
+  background-color: rgba(176, 10, 10, 0.1);
+  border: 1px solid rgba(176, 10, 10, 0.3);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .change-login-container {
     padding: 1rem;
   }

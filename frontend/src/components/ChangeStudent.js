@@ -25,7 +25,7 @@ const ChangeStudent = () => {
     e.preventDefault();
     if (operation === "add") {
       try {
-        const response = await fetch('http://localhost:5000/changestudent/add', {
+        const response = await fetch('http://localhost:5001/changestudent/add', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -51,7 +51,7 @@ const ChangeStudent = () => {
       }
     } else if (operation === "delete") {
       try {
-        const response = await fetch('http://localhost:5000/changestudent/delete', {
+        const response = await fetch('http://localhost:5001/changestudent/delete', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -77,7 +77,7 @@ const ChangeStudent = () => {
       }
     } else if (operation === "update") {
       try {
-        const response = await fetch('http://localhost:5000/changestudent/update', {
+        const response = await fetch('http://localhost:5001/changestudent/update', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

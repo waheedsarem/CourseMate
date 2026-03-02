@@ -14,7 +14,7 @@ const ViewStudentInfo = () => {
       if (!selectedOption) return;
 
       try {
-        const response = await fetch('http://localhost:5000/viewstudentinfo', {
+        const response = await fetch('http://localhost:5001/viewstudentinfo', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ semester: parseInt(selectedOption) }),

@@ -23,7 +23,7 @@ const ChangeSection = () => {
       e.preventDefault();
       if (operation === "add") {
         try {
-          const response = await fetch('http://localhost:5000/changesection/add', {
+          const response = await fetch('http://localhost:5001/changesection/add', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({    teacherCourseCode:formData.teacherCourseCode,
@@ -51,7 +51,7 @@ const ChangeSection = () => {
         }
       } else if (operation === "delete") {
         try {
-          const response = await fetch('http://localhost:5000/changesection/delete', {
+          const response = await fetch('http://localhost:5001/changesection/delete', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({    teacherCourseCode:formData.teacherCourseCode,
@@ -79,7 +79,7 @@ const ChangeSection = () => {
         }       
       } else if (operation === "update") {
         try {
-          const response = await fetch('http://localhost:5000/changesection/update', {
+          const response = await fetch('http://localhost:5001/changesection/update', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({    teacherCourseCode:formData.teacherCourseCode,

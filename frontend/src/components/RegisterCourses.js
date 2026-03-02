@@ -14,7 +14,7 @@ function RegisterCourses() {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/courses/${rollNo}`);
+        const response = await fetch(`http://localhost:5001/courses/${rollNo}`);
         const data = await response.json();
 
         if (Array.isArray(data)) {
@@ -30,7 +30,7 @@ function RegisterCourses() {
 
     const fetchEnrolledCourses = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/enrolledCourses/${rollNo}`);
+        const response = await fetch(`http://localhost:5001/enrolledCourses/${rollNo}`);
         const data = await response.json();
 
         if (Array.isArray(data)) {
@@ -110,7 +110,7 @@ function RegisterCourses() {
   
     // Submit enrollment request
     try {
-      const response = await fetch("http://localhost:5000/enroll", {
+      const response = await fetch("http://localhost:5001/enroll", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ roll_no: rollNo, selectedCourses: selected }),
