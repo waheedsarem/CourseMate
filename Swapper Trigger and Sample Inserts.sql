@@ -3,6 +3,9 @@
 INSERT INTO Students (roll_no, first_name, last_name, department_id, batch, semester, email) 
 VALUES ('s01', 'Sarem', 'Waheed', NULL, 2024, 2, 'dawds@gmail.com');
 
+INSERT INTO Students (roll_no, first_name, last_name, department_id, batch, semester, email)
+VALUES ('23L-0885', 'Hamza', 'Iqbal', NULL, 2023, 3, 'hamza.iqbal@university.edu');
+
 INSERT INTO Log_in(roll_no, password)
 VALUES ('23L-0885', 'fastnuces');
 
@@ -34,9 +37,6 @@ VALUES
 ('NS', 'Natural Sciences', 'T005'),
 ('SS', 'Social Sciences', 'T003');
 
-ALTER TABLE Courses
-ADD course_name VARCHAR(255) NOT NULL;
-
 -- Semester 1 (Fall 2023)
 INSERT INTO Courses (course_code, department_id, credit_hours, prereq, course_type, course_name) VALUES 
 ('NS1001', 'CS', 3, NULL, 'Core', 'Applied Physics'),  
@@ -58,7 +58,6 @@ INSERT INTO Courses (course_code, department_id, credit_hours, prereq, course_ty
 ('EE1005', 'EE', 3, NULL, 'Core', 'Digital Logic Design'),  
 ('EE1005L', 'EE', 1, NULL, 'Core', 'Digital Logic Design Lab'),
 ('SS1014', 'SS', 2, 'SS1012', 'Core', 'Expository Writing'),  
-('SS1014L', 'SS', 1, 'SS1012', 'Core', 'Expository Writing Lab'),  -- Expository Writing Lab → prereq: Functional English
 ('SS1007', 'SS', 2, NULL, 'Core', 'Islamic Studies/Ethics'),  
 ('MT1008', 'CS', 3, 'MT1003', 'Core', 'Multivariable Calculus'),  
 ('CS1004', 'CS', 3, 'CS1002', 'Core', 'Object Oriented Programming'),  

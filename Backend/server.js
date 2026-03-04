@@ -3,7 +3,7 @@ const sql = require('mssql');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const authenticateToken = require('./auth'); // Import the auth middleware
+const authenticateToken = require('./middleware/auth'); // Import the auth middleware
 
 const app = express();
 app.use(cors());

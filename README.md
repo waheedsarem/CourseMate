@@ -26,7 +26,7 @@ Built using **React.js** for the frontend, **Node.js with Express** for the back
   - Restrict summer registrations to previously attempted courses only  
   - Enforce that repeated courses require at least 20 overall failures to be re-offered  
 
-## Files in the Repository  
+## Folder Hierarchy  
 1. **`frontend/`**  
    - Contains all React components and pages for the user interface  
 
@@ -47,20 +47,30 @@ To run or modify this project, ensure you have the following installed:
 - **React.js** (for the frontend, via `npm install`)  
 - **SQL Server Management Studio (SSMS)** (recommended for managing the database)
 
-## How to Use  
+## How to Run  
 
 1. **Setup Database**  
-   - Run `schema.sql` using SSMS or a similar tool to create the required database schema.  
+   - Run `Schema.sql` using SSMS or a similar tool to create the required database schema.  
 
-2. **Start Backend Server**  
+2. **Install Dependencies**  
    ```bash
-   cd backend
-   node server.js
+   cd Backend
+   npm install
+   cd ../frontend
+   npm install
+   ```
 
-3. **Start Frontend Server**  
+3. **Start Backend Server**  
    ```bash
-    cd frontend
-    npm start
+   cd Backend
+   npm start
+   ```
+
+4. **Start Frontend Server**  
+   ```bash
+   cd frontend
+   npm start
+   ```
 
 ## Acknowledgments  
 - Designed to solve real-world course registration issues with a strong focus on validation and usability.
